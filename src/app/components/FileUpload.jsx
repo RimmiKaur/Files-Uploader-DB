@@ -50,6 +50,7 @@ export default function FileUpload({ reloadFiles }) {
         headers: {
           "Content-Type": "multipart/form-data",
         },
+        withCredentials: true,
         onUploadProgress: (progressEvent) => {
           const { loaded, total } = progressEvent;
           const percent = Math.floor((loaded * 100) / total);
