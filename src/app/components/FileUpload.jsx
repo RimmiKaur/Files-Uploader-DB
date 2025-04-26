@@ -46,11 +46,9 @@ export default function FileUpload({ reloadFiles }) {
 
     try {
       // Send file upload request
-      await axios.post("https://file-uploader-db-server.onrender.com/api/upload", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        withCredentials: true,
+    //   await axios.post("https://file-uploader-db-server.onrender.com/api/upload", formData, {
+        await axios.post("http://localhost:8080/api/upload", formData, {
+        
         onUploadProgress: (progressEvent) => {
           const { loaded, total } = progressEvent;
           const percent = Math.floor((loaded * 100) / total);
