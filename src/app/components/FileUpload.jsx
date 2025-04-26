@@ -46,7 +46,7 @@ export default function FileUpload({ reloadFiles }) {
 
     try {
       // Send file upload request
-      await axios.post("http://localhost:8080/api/upload", formData, {
+      await axios.post("https://file-uploader-db-server.onrender.com/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

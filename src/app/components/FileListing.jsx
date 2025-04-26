@@ -29,7 +29,7 @@ export default function FileListing({ reloadFiles }) {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.get("http://localhost:8080/api/files", {
+      const response = await axios.get("https://file-uploader-db-server.onrender.com/api/files", {
         params: {
           filename,
           size,
@@ -72,7 +72,7 @@ export default function FileListing({ reloadFiles }) {
   const handleDelete = async (filename) => {
     setDeleting(filename); // Track which file is being deleted
     try {
-      const response = await axios.delete(`http://localhost:8080/api/files/${filename}`);
+      const response = await axios.delete(`https://file-uploader-db-server.onrender.com/api/files/${filename}`);
       if (response.status === 200) {
         toast.success("File deleted successfully");
         fetchFiles(); // Re-fetch the files after successful deletion
