@@ -13,7 +13,7 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen lg:flex lg:p-4 p-10  justify-center box-border bg-gray-50">
+    <div className="lg:flex lg:p-4 p-10  justify-center box-border bg-gray-50">
       <FileUpload reloadFiles={reloadFiles} />
       <FileListing reloadFiles={reload} />
     </div>
